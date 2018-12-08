@@ -1,0 +1,7 @@
+----Install Azure PowerShell Module----
+Install-Module -Name AzureRM -AllowClobber
+
+----Connect to Azure PowerShell----
+Import-Module AzureRM
+Connect-AzureRmAccount
+
