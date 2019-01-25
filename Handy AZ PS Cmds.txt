@@ -1,7 +1,14 @@
 ----Install Azure PowerShell Module----
 Install-Module -Name AzureRM -AllowClobber
 
-----Connect to Azure PowerShell----
+01.----Connect to Azure PowerShell----
 Import-Module AzureRM
 Connect-AzureRmAccount
+
+02.----Connect to Azure PowerShell----
+$credential = Get-Credential
+Connect-MsolService -Credential $credential
+
+----Set password never to expire for single user----
+Set-MsolUser -UserPrincipalName <name of the account> -PasswordNeverExpires $true
 
